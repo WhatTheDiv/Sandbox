@@ -24,7 +24,7 @@ export default function pageOne() {
       <div className={PageOne.container_body}>
 
         <div className={`${PageOne.body_container}`}>
-          <FormOne/>
+          {/* <FormOne/> */}
           
         </div>
         <div className={`${PageOne.body_container}`}>
