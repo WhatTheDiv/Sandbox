@@ -1,0 +1,129 @@
+.container{
+  display:flex;
+  position:relative;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height:90vh;
+  padding-top:3rem;
+}
+
+/*  Title Section  */
+.container_title {
+  position:relative;
+  width:262px;
+  height:100px;
+  /* background:red; */
+  color:var(--popGreen);
+  text-align: center;
+  animation-name: header_color_fade;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.title_section {
+  animation-duration:1s;
+  animation-iteration-count: 1;
+}
+.title{
+  margin:0;
+  padding:0;
+}
+.sub_title{
+  margin:0;
+  padding:0;
+}
+@keyframes header_color_fade {
+  0% { color:var(--lightBlue);}
+  /* 10% { color:var(--lightBlue)} */
+  50% { color:var(--popGreen) }
+  /* 90% { color:var(--lightBlue)} */
+  100% { color:var(--lightBlue)}
+}
+@keyframes bigScreen_fadeInShiftUp{
+  0% { 
+    opacity:.6;
+    top:20px;
+    left:0;
+  }
+  100% { 
+    opacity:1;
+    top:0;
+    left:0;
+  }
+}
+@keyframes smallScreen_fadeInShiftUp{
+    0% { 
+      opacity:.6;
+      top:20px;
+      left:20px;
+    }
+    100% { 
+      opacity:1;
+      top:0px;
+      left:20px;
+    }
+}
+
+/* Main Buttons */
+.container_buttonMainPage {
+  border-radius:1.5rem;
+  box-shadow: 1px 1px 5px -1px var(--popGreen);
+  animation-name: fadeInAfterDelay;
+  animation-duration:2s;
+  animation-iteration-count: 1;
+  overflow:hidden;
+}
+.container_buttonMainPage a{
+  display:block;
+  background:inherit;
+  border:none;
+  padding:1rem 2rem;
+  color: var(--lightBlue);
+  cursor:pointer;
+  font-size:1rem;
+  text-decoration:none
+}
+@keyframes fadeInAfterDelay {
+  0% {opacity: 0}
+  30% { opacity: 0}
+  100% {opacity: 1}
+}
+
+
+
+
+@media screen and ( max-width: 499px ){ /* SMALL SCREEN */
+  
+  /*  Title Section  */
+  .container_title {
+    width:300px;
+  }
+  .title_section{
+    position:absolute;
+    animation-name:smallScreen_fadeInShiftUp;
+    top:0px;
+    left:20px;
+  }
+  .title{
+    font-size:60px;
+  }
+  .sub_title{
+    font-size:10px;
+  }
+}
+@media screen and ( min-width: 500px ){ /* BIG SCREEN */
+  
+  /*  Title Section  */
+    .container_title {
+  }
+  .title_section{
+    position:absolute;
+    animation-name:bigScreen_fadeInShiftUp;
+  }
+  .title{
+    font-size:70px;
+  }
+  .sub_title{
+    font-size:15px;
+  }
+}
