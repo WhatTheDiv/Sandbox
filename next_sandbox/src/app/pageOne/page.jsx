@@ -1,5 +1,5 @@
 import PageOne from '../Styles/pageOne.module.css'
-import FormOne from './Forms/formOne.jsx'
+import FormOne from './Forms/FormOne.jsx'
 import FormTwo from './Forms/formTwo.jsx'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -24,7 +24,7 @@ export default function pageOne() {
       <div className={PageOne.container_body}>
 
         <div className={`${PageOne.body_container}`}>
-          {/* <FormOne/> */}
+          <FormOne/>
           
         </div>
         <div className={`${PageOne.body_container}`}>

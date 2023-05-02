@@ -1,18 +1,18 @@
 'use client'
 import { useState } from 'react'
-import FormOne from '../../Styles/formOne.module.css'
+import FormOneCss from '../../Styles/FormOne.module.css'
 import Image from 'next/image'
 
-export default function formOne(){
+export default function FormOne(){
   const [ show, setShow ] = useState(false)
   return(
-    <form className={`${FormOne.form}`} onSubmit={ e => submitForm(e) }>
+    <form className={`${FormOneCss.form}`} onSubmit={ e => submitForm(e) }>
       {/* <h1>Login</h1> */}
-      <span className={FormOne.form_section}>
+      <span className={FormOneCss.form_section}>
         <label htmlFor="username">Username</label>
         <input name='username' autoComplete='username' type="text" onChange={ checkInput }/>
       </span>
-      <span className={FormOne.form_section}>
+      <span className={FormOneCss.form_section}>
         <label htmlFor="password">Password</label>
         <input name='password' autoComplete='current-password' type={show ? 'text' : 'password'} onChange={ checkInput }/>
         {
@@ -25,7 +25,7 @@ export default function formOne(){
           /> 
         }
       </span>
-      <span className={FormOne.form_submit}>
+      <span className={FormOneCss.form_submit}>
         <input type="submit" value='Login'/>
         <input type="button" value="Clear" onClick={ clearForm }/>
       </span>
@@ -35,8 +35,8 @@ export default function formOne(){
 
 function submitForm(event){
   event.preventDefault()
-  const form = document.querySelector(`.${FormOne.form}`)
-  const items = form.querySelectorAll(`.${FormOne.form_section} input`)
+  const form = document.querySelector(`.${FormOneCss.form}`)
+  const items = form.querySelectorAll(`.${FormOneCss.form_section} input`)
   const inputs = {
     username:items[0].value,
     password:items[1].value
@@ -44,7 +44,7 @@ function submitForm(event){
   console.log(inputs)
 }
 function clearForm(){
-  const form = document.querySelector(`.${FormOne.form}`)
+  const form = document.querySelector(`.${FormOneCss.form}`)
   form.querySelectorAll('label').forEach( item => item.style.color = 'var(--mediumBlue)')
   form.reset()
 }
