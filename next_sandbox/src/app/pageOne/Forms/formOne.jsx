@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import FormOneCss from '../../Styles/FormOne.module.css'
+import FormOneCss from '../../Styles/formOne.module.css'
 import Image from 'next/image'
 
 export default function FormOne(){
