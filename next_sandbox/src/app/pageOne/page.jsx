@@ -2,7 +2,7 @@ import PageOne from '../Styles/pageOne.module.css'
 import FormOne from './Forms/FormOne.jsx'
 import FormTwo from './Forms/formTwo.jsx'
 import Link from 'next/link'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 
 export default function pageOne() {
   return (
