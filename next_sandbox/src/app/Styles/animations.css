@@ -1,0 +1,69 @@
+
+
+.animationVariables{
+  --originalColor: var(--popGreen);
+  --flipColor: var(--lightBlue);
+  --fadeColor: red;
+  --rotateColor: orange;
+}
+
+.flip{
+  animation: flip ease-in-out forwards;
+}
+.fade{
+  animation: fade ease-in-out forwards;
+}
+.rotate{
+  animation: rotate ease-in-out forwards;
+}
+
+@keyframes flip{
+  0%{
+    transform:rotateX(0turn);
+    box-shadow:0px 0px 29px -5px var(--originalColor);
+
+  }
+  50%{
+    box-shadow:0px 0px 29px -5px var(--originalColor);
+  }
+  51%{
+    box-shadow:0px 0px 29px -5px var(--flipColor);
+  }
+  100%{
+    transform:rotateX(.5turn);
+    box-shadow:0px 0px 29px -5px var(--flipColor);
+  }
+}
+
+@keyframes fade{
+  0%{
+    opacity:1;
+    box-shadow:0px 0px 29px -5px var(--originalColor);
+
+  }
+  50%{
+    opacity:0;
+    box-shadow:0px 0px 29px -5px var(--originalColor);
+  }
+  51%{
+    box-shadow:0px 0px 29px -5px var(--fadeColor);
+  }
+  100%{
+    opacity:1;
+    box-shadow:0px 0px 29px -5px var(--fadeColor);
+  }
+}
+@keyframes rotate{
+  0%{
+    transform:rotateX('0deg') 
+  }
+  50%{
+
+  }
+  51%{
+
+  }
+  100%{
+    transform:rotateX('45deg') translateX('45px')
+  }
+}

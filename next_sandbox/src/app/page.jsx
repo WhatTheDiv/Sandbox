@@ -8,7 +8,7 @@ export default function Home() {
   return (
    <main className={home.container}>
     <div className={home.container_buttonMainPage}>
-      {/* <Link href='/pageOne'>Forms</Link> */}
+      <Link href='/pageOne'>Forms</Link>
     </div>
     <div className={home.container_buttonMainPage}>
     <Link href='/pageTwo'>Buttons</Link>
